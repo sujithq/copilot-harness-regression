@@ -1,0 +1,16 @@
+{
+  "name": "copilot-harness-regression",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public-safe regression reproduction for GitHub Copilot harness customizations, plugins, MCP, and latency.",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/validate-config.mjs && node --test tests/repro-mcp.test.mjs",
+    "invoke:mcp": "node scripts/invoke-mcp.mjs",
+    "bench:mcp": "node scripts/measure-mcp-latency.mjs 20",
+    "validate": "node scripts/validate-config.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

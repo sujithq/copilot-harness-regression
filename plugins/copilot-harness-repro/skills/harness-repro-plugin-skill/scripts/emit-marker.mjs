@@ -1,0 +1,1 @@
+process.stdout.write("HARNESS_REPRO_PLUGIN_SKILL_SCRIPT_EXECUTED:v1\n");

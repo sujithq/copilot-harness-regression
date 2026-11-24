@@ -1,0 +1,388 @@
+{
+  "runId": "<run-id>",
+  "createdUtc": "<ISO-8601 UTC timestamp>",
+  "operatorRole": "<role label, not a personal name>",
+  "notes": "",
+  "environment": {
+    "vscodeVersion": "<fill>",
+    "vscodeBuild": "<fill>",
+    "copilotExtensionOrAppVersion": "<fill>",
+    "harness": "<Copilot|Local|other>",
+    "model": "<exact model identifier>",
+    "selectedCustomAgent": null,
+    "os": "<fill>",
+    "osArchitecture": "<fill>",
+    "executionHost": "<local|remote|container>",
+    "workspaceRoot": "<sanitized path>",
+    "workspaceTrust": "<trusted|restricted|unknown>",
+    "branch": "<fill>",
+    "commit": "<fill>",
+    "dirtyState": "<clean|dirty|unknown>",
+    "nodeVersion": "<fill>",
+    "mcpConfigPathsDiscovered": [],
+    "mcpServerNamesDiscovered": [],
+    "pluginInstallSource": "<none|local-folder|marketplace|unknown>",
+    "pluginCacheState": "<fresh|reinstalled|stale-possible|unknown>",
+    "relevantSettingsAndPolicies": [],
+    "debugCaptureAvailable": null
+  },
+  "scenarios": [
+    {
+      "scenarioId": "T01",
+      "title": "Repository customization discovery",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T01-customization-discovery.md",
+      "expectedBehavior": {
+        "markers": [],
+        "output": "Skill and custom agent are discoverable without invocation; errors and ignored paths are recorded."
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": null,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": null,
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    },
+    {
+      "scenarioId": "T02",
+      "title": "Repository skill explicit invocation",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T02-repository-skill-explicit.md",
+      "expectedBehavior": {
+        "markers": [
+          "HARNESS_REPRO_REPOSITORY_SKILL_BODY_LOADED:v1",
+          "HARNESS_REPRO_REPOSITORY_SKILL_REFERENCE_LOADED:v1",
+          "HARNESS_REPRO_REPOSITORY_SKILL_SCRIPT_EXECUTED:v1"
+        ],
+        "output": "Three exact marker lines plus successful read/script evidence."
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": null,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": "harness_warm_prompt_to_final",
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    },
+    {
+      "scenarioId": "T03",
+      "title": "Repository skill automatic invocation",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T03-repository-skill-automatic.md",
+      "expectedBehavior": {
+        "markers": [
+          "HARNESS_REPRO_REPOSITORY_SKILL_BODY_LOADED:v1",
+          "HARNESS_REPRO_REPOSITORY_SKILL_REFERENCE_LOADED:v1",
+          "HARNESS_REPRO_REPOSITORY_SKILL_SCRIPT_EXECUTED:v1"
+        ],
+        "output": "Model selects the skill and produces all three markers without a slash command."
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": null,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": "harness_warm_prompt_to_final",
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    },
+    {
+      "scenarioId": "T04",
+      "title": "Custom agent body loading",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T04-custom-agent-loading.md",
+      "expectedBehavior": {
+        "markers": [
+          "HARNESS_REPRO_AGENT_BODY_LOADED:v1",
+          "HARNESS_REPRO_AGENT_INSTRUCTIONS_ACTIVE:v1"
+        ],
+        "output": "Exactly two custom-agent markers and no tool calls."
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": null,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": "harness_warm_prompt_to_final",
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    },
+    {
+      "scenarioId": "T05",
+      "title": "Copilot workspace MCP discovery",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T05-copilot-mcp-discovery.md",
+      "expectedBehavior": {
+        "markers": [
+          "HARNESS_REPRO_MCP_SERVER_STARTED:v1"
+        ],
+        "output": "harness-repro-workspace-mcp is discovered with emit_repro_marker."
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": 0,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": null,
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    },
+    {
+      "scenarioId": "T06",
+      "title": "Copilot workspace MCP execution",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T06-copilot-mcp-execution.md",
+      "expectedBehavior": {
+        "markers": [
+          "HARNESS_REPRO_MCP_TOOL_EXECUTED:v1"
+        ],
+        "output": "{\"marker\":\"HARNESS_REPRO_MCP_TOOL_EXECUTED:v1\",\"origin\":\"workspace\",\"trial\":\"T06\"}"
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": null,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": "harness_warm_prompt_to_final",
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    },
+    {
+      "scenarioId": "T07",
+      "title": "Legacy Local MCP discovery and execution",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T07-local-mcp-discovery-execution.md",
+      "expectedBehavior": {
+        "markers": [
+          "HARNESS_REPRO_MCP_TOOL_EXECUTED:v1"
+        ],
+        "output": "{\"marker\":\"HARNESS_REPRO_MCP_TOOL_EXECUTED:v1\",\"origin\":\"local\",\"trial\":\"T07\"}"
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": null,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": "harness_warm_prompt_to_final",
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    },
+    {
+      "scenarioId": "T08",
+      "title": "Agent Plugins 1.0 local loading",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T08-plugin-loading.md",
+      "expectedBehavior": {
+        "markers": [
+          "HARNESS_REPRO_MCP_SERVER_STARTED:v1"
+        ],
+        "output": "Local plugin, packaged skill, and plugin MCP server are discoverable after explicit install."
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": 0,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": null,
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    },
+    {
+      "scenarioId": "T09",
+      "title": "Plugin skill and MCP behavior",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T09-plugin-skill-mcp-behavior.md",
+      "expectedBehavior": {
+        "markers": [
+          "HARNESS_REPRO_PLUGIN_SKILL_BODY_LOADED:v1",
+          "HARNESS_REPRO_PLUGIN_SKILL_REFERENCE_LOADED:v1",
+          "HARNESS_REPRO_PLUGIN_SKILL_SCRIPT_EXECUTED:v1",
+          "HARNESS_REPRO_MCP_TOOL_EXECUTED:v1"
+        ],
+        "output": "Three plugin-skill markers and plugin-origin MCP JSON."
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": null,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": "harness_warm_prompt_to_final",
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    },
+    {
+      "scenarioId": "T10",
+      "title": "Startup and response latency",
+      "status": "not-run",
+      "promptOrProcedure": "scenarios/T10-startup-response-latency.md",
+      "expectedBehavior": {
+        "markers": [
+          "HARNESS_REPRO_MCP_TOOL_EXECUTED:v1"
+        ],
+        "output": "Complete cold/warm trial timing with origin-correct MCP output."
+      },
+      "actualResult": {
+        "markersObserved": [],
+        "responseSummary": "",
+        "toolCallCount": null,
+        "errorSummary": ""
+      },
+      "timing": {
+        "scope": "harness_cold_start_to_final",
+        "durationMs": null,
+        "trials": []
+      },
+      "environmentEvidence": [],
+      "evidence": {
+        "logPaths": [],
+        "screenshotPaths": [],
+        "sanitized": false
+      },
+      "manualStepsCompleted": false,
+      "passFailCriteria": "See the scenario document.",
+      "classification": "not-run",
+      "notes": ""
+    }
+  ],
+  "localProtocolMetrics": {
+    "utility": "node scripts/measure-mcp-latency.mjs 20",
+    "run": false,
+    "rawOutputPath": null,
+    "summary": null,
+    "scopeWarningAccepted": false
+  },
+  "sanitization": {
+    "status": "not-reviewed",
+    "credentialsRemoved": null,
+    "customerDataRemoved": null,
+    "pathsRedacted": null,
+    "rawLogsExcluded": null,
+    "reviewedByRole": null
+  },
+  "classification": {
+    "overall": "not-run",
+    "confidence": null,
+    "rationale": "",
+    "reproductionCount": 0
+  }
+}
