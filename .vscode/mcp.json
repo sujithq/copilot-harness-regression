@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "harness-repro-local-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/scripts/repro-mcp-server.mjs"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "REPRO_MCP_ORIGIN": "local"
+      }
+    }
+  }
+}

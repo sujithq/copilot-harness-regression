@@ -1,0 +1,1 @@
+run_id,scenario_id,trial,started_utc,harness,model,prompt_id,workspace_trust,plugin_install_state,server_source,cold_or_warm,timing_scope,first_output_ms,duration_ms,tool_call_count,expected_output,actual_output,pass,sanitized,evidence_path,notes
